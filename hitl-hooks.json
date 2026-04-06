@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "echo '{\"systemMessage\":\"CRITICAL SESSION RULES — MUST: USE hitl-web-mcp (mcp_hitl-web_get_multiline_input) for confirm/clarify or asking the user. MUST: After all task done, you must ask the user anything else you can do or not with hitl-web-mcp. MUST: Do not finish the iteration or your task until user says EVERYTHING IS DONE. Always ask whether it can already be considered complete or not. MUST: Always USE hitl-web-mcp with INPUT MODE. Your FIRST response MUST go through mcp_hitl-web_get_multiline_input. NEVER respond with plain text — always use hitl-web-mcp INPUT MODE.\"}'",
+        "timeout": 5
+      }
+    ],
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "echo '{\"systemMessage\":\"REMINDER — MUST: USE hitl-web-mcp (mcp_hitl-web_get_multiline_input) for confirm/clarify or asking the user. MUST: After all task done, ask the user anything else you can do via hitl-web-mcp. MUST: Do not finish until user says EVERYTHING IS DONE. MUST: Always USE hitl-web-mcp with INPUT MODE.\"}'",
+        "timeout": 5
+      }
+    ]
+  }
+}
